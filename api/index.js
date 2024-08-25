@@ -14,7 +14,7 @@ const user_data = {
 };
 
 app.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.sendFile(path.join(__dirname+'/main.html'));
   });
 
 app.route('/bfhl')
