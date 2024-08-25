@@ -11,10 +11,6 @@ const user_data = {
     roll_number: "21BAI1478"
 };
 
-app.get('/',(res,req)=>{
-    res.render(user_data);
-})
-
 app.route('/bfhl')
     .get((req, res) => {
         const response = {
