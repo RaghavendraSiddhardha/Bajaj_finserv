@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors()); 
 app.use(express.json());  
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
 
 const user_data = {
     user_id: "1478",
