@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhardha_21BAI1478</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Input and API Response</h1>
+        <form id="jsonForm">
+            <div class="form-group">
+                <label for="jsonInput">JSON Input:</label>
+                <textarea id="jsonInput" placeholder='Enter JSON like {"data":["A","C","z"]}' required></textarea>
+                <small id="error" class="form-text text-danger"></small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="filters" style="display: none;">
+            <label for="filterSelect">Filter by:</label>
+            <div class="dropdown">
+                <button class="dropdown-button" id="dropdownMenuButton">
+                    Select Filters
+                    <span>&#9662;</span> 
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filterAlphabets" value="alphabets">
+                        <label class="form-check-label" for="filterAlphabets">Alphabets</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filterNumbers" value="numbers">
+                        <label class="form-check-label" for="filterNumbers">Numbers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="filterHighestLowercase" value="highest_lowercase">
+                        <label class="form-check-label" for="filterHighestLowercase">Highest lowercase alphabet</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="response" class="response-container">
+            <h2>Response:</h2>
+            <div id="noResults" class="no-results" style="display: none;">No results found.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
