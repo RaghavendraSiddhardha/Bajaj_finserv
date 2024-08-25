@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const noResults = document.getElementById('noResults');
     const dropdownButton = document.getElementById('dropdownMenuButton');
     const dropdownMenu = document.querySelector('.dropdown-menu');
+    const baseURL = window.location.origin;
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/bfhl', { 
+            const response = await fetch(`${baseURL}/bfhl`, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

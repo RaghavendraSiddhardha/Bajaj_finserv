@@ -1,15 +1,21 @@
 const express = require('express');
-const cors = require('cors'); 
+const cors = require('cors');
+const path = require('path');
 const app = express();
 
 app.use(cors()); 
 app.use(express.json());  
+app.use(express.static('public'))
 
 const user_data = {
     user_id: "1478",
     email: "raghavendra.siddhardha2021@vitstudent.ac.in",
     roll_number: "21BAI1478"
 };
+
+app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/index.html'));
+  });
 
 app.route('/bfhl')
     .get((req, res) => {
